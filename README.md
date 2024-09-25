@@ -1,7 +1,7 @@
 # React Native Apps Repository
 
 
-## English 🇺🇸🇬🇧
+## 🇺🇸🇬🇧
 
 ### Description
 
@@ -18,7 +18,7 @@ My goal with this repository is to practice, learn, and improve my React Native 
 
 ---
 
-## Português 🇵🇹🇧🇷
+## 🇵🇹🇧🇷
 
 ### Descrição
 
