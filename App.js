@@ -1,16 +1,21 @@
 import { useState } from "react";
 import GoalItem from "./components/GoalItem";
 import GoalInput from "./components/GoalInput";
-import { StyleSheet, View, FlatList } from "react-native";
+import { StyleSheet, View, FlatList, Button } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { v4 as uuid } from "uuid";
+import 'react-native-get-random-values';
 
 export default function App() {
+  const [modalIsVisible, setModalIsVisible] = useState(false);
   const [courseGoals, setCourseGoals] = useState([]);
 
   function addGoalHandler(enteredGoalText) {
     setCourseGoals((currentCourseGoals) => [
       ...currentCourseGoals,
-      { text: enteredGoalText, key: Math.random().toString },
+      { text: enteredGoalText, id: uuid() },
     ]);
+    endAddGoalHandler();
   }
 
   function deleteGoalHandler(id) {
@@ -19,24 +24,46 @@ export default function App() {
     });
   }
 
-  return (
-    <View style={styles.appContainer}>
-      <GoalInput onAddGoal={addGoalHandler} />
+  function startAddGoalHandler() {
+    setModalIsVisible(true);
+  }
 
-      <FlatList
-        data={courseGoals}
-        style={styles.goalsContainer}
-        renderItem={(itemData) => {
-          return (
-            <GoalItem
-              text={itemData.item.text}
-              id={itemData.item.id}
-              onDeleteItem={deleteGoalHandler}
-            />
-          );
-        }}
-      />
-    </View>
+  function endAddGoalHandler() {
+    setModalIsVisible(false);
+  }
+
+  return (
+    <>
+      <StatusBar style="light" />
+      <View style={styles.appContainer}>
+        <Button
+          title="Add new Goal"
+          color="#520052"
+          onPress={startAddGoalHandler}
+        />
+
+        <GoalInput
+          visible={modalIsVisible}
+          onAddGoal={addGoalHandler}
+          dismissModal={endAddGoalHandler}
+        />
+
+        <View style={styles.goalsContainer}>
+          <FlatList
+            data={courseGoals}
+            renderItem={(itemData) => {
+              return (
+                <GoalItem
+                  text={itemData.item.text}
+                  id={itemData.item.id}
+                  onDeleteItem={deleteGoalHandler}
+                />
+              );
+            }}
+          />
+        </View>
+      </View>
+    </>
   );
 }
 
