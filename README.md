@@ -1,5 +1,5 @@
 # 🇵🇹 🇧🇷
-# Aplicativo Simples de Metas - Explicação Detalhada
+# Aplicativo Simples de Metas
 
 Este é um aplicativo básico de gerenciamento de metas desenvolvido em React. Ele oferece aos usuários a capacidade de adicionar, exibir e gerenciar uma lista de metas. A estrutura do aplicativo foi projetada para ser fácil de manter e organizada, com cada componente separado em seu próprio ficheiro.
 
@@ -25,7 +25,7 @@ Este é um aplicativo básico de gerenciamento de metas desenvolvido em React. E
 
 
 # 🇬🇧🇺🇸
-# Simple Goal App - Detailed Explanation
+# Simple Goal App
 
 This app is a basic goal management system developed using React. It provides users with the ability to add, display, and manage a list of goals. The application's structure is designed for maintainability and organization, with each component separated into its own file.
 
