@@ -48,3 +48,13 @@ This app is a basic goal management system developed using React. It provides us
 ## Modal Usage
 
 - A modal window is used to capture the user's input when adding a new goal. This ensures a clean and user-friendly interface, where users can focus on adding one goal at a time.
+
+---
+
+
+# iOS
+![iOS GIF](./gifs/iOS.gif)
+
+
+# Android
+![Android GIF](./gifs/android.gif)
