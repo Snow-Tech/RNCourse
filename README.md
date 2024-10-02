@@ -23,6 +23,7 @@ Este é um aplicativo básico de gerenciamento de metas desenvolvido em React. E
 - Uma janela modal é usada para capturar a entrada do usuário ao adicionar uma nova meta. Isso garante uma interface limpa e amigável, onde os usuários podem se concentrar em adicionar uma meta por vez.
 
 
+---
 
 
 # 🇬🇧🇺🇸 - Simple Goal App
